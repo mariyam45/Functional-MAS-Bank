@@ -4,6 +4,10 @@ function getInputFieldValueById(inputFieldId) {
   const inputFieldValue = parseFloat(inputFieldValueStn);
 
   inputField.value = "";
+  if (isNaN(inputFieldValue)) {
+    alert("Please provide a valid number");
+    return;
+  }
   return inputFieldValue;
 }
 function getTextElementValueById(elementId) {
